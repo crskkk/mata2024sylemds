@@ -1,0 +1,17 @@
+{
+  "name": "mata2024sylemds",
+  "version": "2.0.",
+  "description": "Portal MATA para 2024",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cris Duque",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "firebase": "^10.7.1",
+    "firebase-tools": "^13.0.1",
+    "gh": "^2.8.9",
+    "webpack": "^5.89.0"
+  }
+}
