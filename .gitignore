@@ -90,6 +90,9 @@ out
 # Nuxt.js build / generate output
 .nuxt
 dist
+## EXCEPTION TO THE IGNORATION
+!dist/index.html
+
 
 # Gatsby files
 .cache/
