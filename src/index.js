@@ -1,1 +1,2 @@
-console.log("Sup")
+import { firebaseinit } from './firebasecreds.js';
+firebase();
