@@ -3,14 +3,19 @@ firebaseinit();
 
 // Authentication (The auth)
 import{     
-    getAuth,
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
-    signOut,
-    onAuthStateChanged
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged
 }
 from 'firebase/auth'
 const auth = getAuth()
+
+// User status checker. NEXT› Be the ONLY Hide and Show controller
+const unsubAuth = onAuthStateChanged(auth, (user) => {
+    console.log(user.email)
+  })
 
 // Listeners
 const email = document.querySelector('#email')
@@ -25,7 +30,7 @@ signUpButton.addEventListener('click', ()=>{
     const apassword = password.value
     createUserWithEmailAndPassword(auth,aemail,apassword)
     .then((cred)=>{
-      console.log(cred.user)
+      console.log('USER CREATED')
       // RESUME: Hide and Show
       document.getElementById('email').remove()
       document.getElementById('password').remove()
@@ -33,9 +38,12 @@ signUpButton.addEventListener('click', ()=>{
       document.getElementById('signInButton').remove()
 
       document.getElementById('loggedIn').style.display = 'block'
-      // NEXT: Warning if email already in database
+      // NEXT:
+        // Say hi - loggedInGreeting innerhtml
+        // Warning if email already in database
     })
     .catch((err)=>{
+      // NEXT: Specific warnings in UX
       console.log(err.code + err.message)
     })
   })
@@ -46,7 +54,7 @@ signUpButton.addEventListener('click', ()=>{
     const apassword = password.value
     signInWithEmailAndPassword(auth, aemail, apassword)
     .then(cred =>{
-      console.log('user logged in:', cred.user)
+      console.log('USER LOGGED IN')
       //
       document.getElementById('email').remove()
       document.getElementById('password').remove()
@@ -61,14 +69,11 @@ signUpButton.addEventListener('click', ()=>{
 signOutButton.addEventListener('click', () => {
   signOut(auth)
     .then(() => {
-      console.log('user signed out')
+      console.log('USER SIGNED OUT')
     })
     .catch(err => {
       console.log(err.message)
     })
 })
 
-// User status checker. NEXT› Hide and Show
-const unsubAuth = onAuthStateChanged(auth, (user) => {
-    console.log('user status changed:', user)
-  })
+// NEXT› Unsubscribe from changes?
