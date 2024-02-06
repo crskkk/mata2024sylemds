@@ -3,30 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Portal MATA V1.0 (IN PROGRESS)</title>
+    <title>Portal MATA V0.20 (IN PROGRESS)</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <input type="checkbox" id="menu-toggle" />
-    <label for="menu-toggle" class="menu-icon">&#9776;</label> <!-- This is the hamburger icon -->
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
     <aside>
-        <!-- Side menu -->
         <nav>
             <div class="logo">Logo Space</div>
+            <div id="authForm">
+                <input type="email" name="email" id="email" placeholder="Ingresa tu email" >
+                <input type="password" name="password" id="password" placeholder="Ingresa tu contraseña">
+                <button id="signUpButton">Sign Up</button>
+                <button id="signInButton">Sign In</button>
+                <div id="loggedIn" style="display: none;">
+                    <button id="signOutButton" >Sign Out</button>
+                </div>
+            </div>
+                
             <ul>
-                <li><input type="email" name="email" id="email" placeholder="Ingresa tu email"></li>
-                <li><input type="password" name="password" id="password" placeholder="Ingresa tu contraseña"></li>
-                <li><a id="signInButton" href="#signup">Registro</a>
-                    <a id="signUpButton" href="#login">Iniciar</a></li>
-                <!-- Email field in menu? Captcha? -->
-                <li><a href="#logout">Salir</a></li>
                 <li><a href="#profile">Mi Cuenta</a></li>
                 <li><a href="#store">Tienda</a></li>
                 <li><a href="#about">Nosotros</a></li>
-                <li><a href="#help">Ayuda</a></li>
+                <li><a href="#help">Ayuda</a> • One-Click Call</li>
                 <li><a href="#privacy">Privacidad</a></li>
             </ul>
-        </nav> 
+        </nav>
     </aside>
     <main>
         <!-- Main page content goes here: THE FUNNEL -->
