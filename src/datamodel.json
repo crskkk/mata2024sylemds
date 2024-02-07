@@ -1,0 +1,187 @@
+[
+  {
+    "name": "GOALS",
+    "id": "5df20a11-fa03-43b4-910c-4cb3511b8b6a",
+    "type": "collection",
+    "isKey": false,
+    "group": null,
+    "isVariable": false,
+    "description": null,
+    "children": [
+      {
+        "name": "Name",
+        "id": "ff2c1123-350d-4e7e-b6d2-ca4e5a328ad2",
+        "type": "document",
+        "isKey": false,
+        "group": "f08a5903-59f3-4a29-9690-ac74f3b04fbb",
+        "isVariable": false,
+        "description": null,
+        "children": []
+      },
+      {
+        "name": "Description",
+        "id": "ad6f9771-0dcb-4c66-beac-e4b5fb0e855c",
+        "type": "document",
+        "isKey": false,
+        "group": "37adc352-5255-4d11-b36e-02dfff5eb9ad",
+        "isVariable": false,
+        "description": null,
+        "children": []
+      },
+      {
+        "name": "GoalIndexID",
+        "id": "63f8ca94-a826-44dd-99fe-b5bf46f0b5af",
+        "type": "document",
+        "isKey": false,
+        "group": "f08a5903-59f3-4a29-9690-ac74f3b04fbb",
+        "isVariable": false,
+        "description": null,
+        "children": []
+      },
+      {
+        "name": "ID",
+        "id": "404206eb-cba2-4e27-8e77-c48f4c4f06fe",
+        "type": "document",
+        "isKey": true,
+        "group": "37adc352-5255-4d11-b36e-02dfff5eb9ad",
+        "isVariable": false,
+        "description": null,
+        "children": []
+      },
+      {
+        "name": "StartDate",
+        "id": "d74d8974-b54c-47fe-bc75-e4428f9f9acb",
+        "type": "document",
+        "isKey": false,
+        "group": null,
+        "isVariable": false,
+        "description": null,
+        "children": []
+      },
+      {
+        "name": "EndDate",
+        "id": "7cb37301-4107-4df1-9f72-f78734ab6e98",
+        "type": "document",
+        "isKey": false,
+        "group": null,
+        "isVariable": false,
+        "description": null,
+        "children": []
+      },
+      {
+        "name": "Pillars",
+        "id": "b7eff323-80bf-43a0-9880-8c78987a2b0c",
+        "type": "document",
+        "isKey": false,
+        "group": null,
+        "isVariable": false,
+        "description": null,
+        "children": [
+          {
+            "name": "Pillars",
+            "id": "97c44498-e0c8-454b-a867-36b9678a1640",
+            "type": "collection",
+            "isKey": false,
+            "group": null,
+            "isVariable": false,
+            "description": null,
+            "children": [
+              {
+                "name": "Actions",
+                "id": "70ef0030-2599-4f9f-8123-094ee4753f96",
+                "type": "document",
+                "isKey": false,
+                "group": null,
+                "isVariable": false,
+                "description": null,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Users",
+        "id": "44128951-30e9-4f11-8cc7-ad98a116915a",
+        "type": "document",
+        "isKey": false,
+        "group": null,
+        "isVariable": false,
+        "description": null,
+        "children": []
+      },
+      {
+        "name": "Schedule",
+        "id": "4f3c798d-fc2e-4f3d-a79f-a5f8366828e3",
+        "type": "document",
+        "isKey": false,
+        "group": null,
+        "isVariable": false,
+        "description": null,
+        "children": [
+          {
+            "name": "Sessions",
+            "id": "78e6bf21-1f8d-4952-98fa-6b00060f51ed",
+            "type": "collection",
+            "isKey": false,
+            "group": null,
+            "isVariable": false,
+            "description": null,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Plan",
+        "id": "831910b9-3238-4107-848c-4fec6f4720ad",
+        "type": "document",
+        "isKey": false,
+        "group": null,
+        "isVariable": false,
+        "description": null,
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "USERS",
+    "id": "7b856d5a-b614-4451-9d2c-a6910cdd6343",
+    "type": "collection",
+    "isKey": false,
+    "group": null,
+    "isVariable": false,
+    "description": null,
+    "children": [
+      {
+        "name": "Name",
+        "id": "3324ee64-8d04-4ad5-91a0-0baad456b444",
+        "type": "document",
+        "isKey": false,
+        "group": null,
+        "isVariable": false,
+        "description": null,
+        "children": []
+      },
+      {
+        "name": "Email",
+        "id": "a39144e9-b572-48a8-bb13-a2a71702488a",
+        "type": "document",
+        "isKey": false,
+        "group": null,
+        "isVariable": false,
+        "description": null,
+        "children": []
+      },
+      {
+        "name": "AuthID",
+        "id": "12ccee44-5d4b-453d-81d4-0173cc344d01",
+        "type": "document",
+        "isKey": true,
+        "group": null,
+        "isVariable": false,
+        "description": null,
+        "children": []
+      }
+    ]
+  }
+]

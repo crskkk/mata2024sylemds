@@ -1,7 +1,8 @@
+import { initializeApp } from 'firebase/app';
 import { firebaseinit } from './firebasecreds.js';
 firebaseinit();
 
-// Authentication (The auth)
+// ::::::AUTHENTICATION:::::: (The auth)
 import{     
   getAuth,
   createUserWithEmailAndPassword,
@@ -77,3 +78,21 @@ signOutButton.addEventListener('click', () => {
 })
 
 // NEXT› Unsubscribe from changes?
+
+
+// ::::::FIRESTORE:::::: (The db)
+import {
+  getFirestore,
+} from 'firebase/firestore'
+initializeApp(firebaseConfig)
+const db = getFirestore
+// What to store:
+//   Goal     SMART
+//   Pillars  3-4
+//   Actions  Tied to a pillar
+//   Plan     Sensible sequence
+//   Schedule Self explanatory
+//   Habits   Enlighten your daily life
+//   Sessions Where habits are practices therefore magic happens
+//   Tracking What's been going on?
+//   
