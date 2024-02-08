@@ -1,187 +1,446 @@
 [
-  {
-    "name": "GOALS",
-    "id": "5df20a11-fa03-43b4-910c-4cb3511b8b6a",
-    "type": "collection",
-    "isKey": false,
-    "group": null,
-    "isVariable": false,
-    "description": null,
-    "children": [
-      {
-        "name": "Name",
-        "id": "ff2c1123-350d-4e7e-b6d2-ca4e5a328ad2",
-        "type": "document",
-        "isKey": false,
-        "group": "f08a5903-59f3-4a29-9690-ac74f3b04fbb",
-        "isVariable": false,
-        "description": null,
-        "children": []
-      },
-      {
-        "name": "Description",
-        "id": "ad6f9771-0dcb-4c66-beac-e4b5fb0e855c",
-        "type": "document",
-        "isKey": false,
-        "group": "37adc352-5255-4d11-b36e-02dfff5eb9ad",
-        "isVariable": false,
-        "description": null,
-        "children": []
-      },
-      {
-        "name": "GoalIndexID",
-        "id": "63f8ca94-a826-44dd-99fe-b5bf46f0b5af",
-        "type": "document",
-        "isKey": false,
-        "group": "f08a5903-59f3-4a29-9690-ac74f3b04fbb",
-        "isVariable": false,
-        "description": null,
-        "children": []
-      },
-      {
-        "name": "ID",
-        "id": "404206eb-cba2-4e27-8e77-c48f4c4f06fe",
-        "type": "document",
-        "isKey": true,
-        "group": "37adc352-5255-4d11-b36e-02dfff5eb9ad",
-        "isVariable": false,
-        "description": null,
-        "children": []
-      },
-      {
-        "name": "StartDate",
-        "id": "d74d8974-b54c-47fe-bc75-e4428f9f9acb",
-        "type": "document",
-        "isKey": false,
-        "group": null,
-        "isVariable": false,
-        "description": null,
-        "children": []
-      },
-      {
-        "name": "EndDate",
-        "id": "7cb37301-4107-4df1-9f72-f78734ab6e98",
-        "type": "document",
-        "isKey": false,
-        "group": null,
-        "isVariable": false,
-        "description": null,
-        "children": []
-      },
-      {
-        "name": "Pillars",
-        "id": "b7eff323-80bf-43a0-9880-8c78987a2b0c",
-        "type": "document",
-        "isKey": false,
-        "group": null,
-        "isVariable": false,
-        "description": null,
-        "children": [
-          {
-            "name": "Pillars",
-            "id": "97c44498-e0c8-454b-a867-36b9678a1640",
-            "type": "collection",
-            "isKey": false,
-            "group": null,
-            "isVariable": false,
-            "description": null,
-            "children": [
-              {
-                "name": "Actions",
-                "id": "70ef0030-2599-4f9f-8123-094ee4753f96",
-                "type": "document",
-                "isKey": false,
-                "group": null,
-                "isVariable": false,
-                "description": null,
-                "children": []
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Users",
-        "id": "44128951-30e9-4f11-8cc7-ad98a116915a",
-        "type": "document",
-        "isKey": false,
-        "group": null,
-        "isVariable": false,
-        "description": null,
-        "children": []
-      },
-      {
-        "name": "Schedule",
-        "id": "4f3c798d-fc2e-4f3d-a79f-a5f8366828e3",
-        "type": "document",
-        "isKey": false,
-        "group": null,
-        "isVariable": false,
-        "description": null,
-        "children": [
-          {
-            "name": "Sessions",
-            "id": "78e6bf21-1f8d-4952-98fa-6b00060f51ed",
-            "type": "collection",
-            "isKey": false,
-            "group": null,
-            "isVariable": false,
-            "description": null,
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Plan",
-        "id": "831910b9-3238-4107-848c-4fec6f4720ad",
-        "type": "document",
-        "isKey": false,
-        "group": null,
-        "isVariable": false,
-        "description": null,
-        "children": []
-      }
-    ]
-  },
-  {
-    "name": "USERS",
-    "id": "7b856d5a-b614-4451-9d2c-a6910cdd6343",
-    "type": "collection",
-    "isKey": false,
-    "group": null,
-    "isVariable": false,
-    "description": null,
-    "children": [
-      {
-        "name": "Name",
-        "id": "3324ee64-8d04-4ad5-91a0-0baad456b444",
-        "type": "document",
-        "isKey": false,
-        "group": null,
-        "isVariable": false,
-        "description": null,
-        "children": []
-      },
-      {
-        "name": "Email",
-        "id": "a39144e9-b572-48a8-bb13-a2a71702488a",
-        "type": "document",
-        "isKey": false,
-        "group": null,
-        "isVariable": false,
-        "description": null,
-        "children": []
-      },
-      {
-        "name": "AuthID",
-        "id": "12ccee44-5d4b-453d-81d4-0173cc344d01",
-        "type": "document",
-        "isKey": true,
-        "group": null,
-        "isVariable": false,
-        "description": null,
-        "children": []
-      }
-    ]
-  }
-]
+    {
+      "name": "GOALS",
+      "id": "5df20a11-fa03-43b4-910c-4cb3511b8b6a",
+      "type": "collection",
+      "isKey": false,
+      "group": null,
+      "isVariable": false,
+      "description": null,
+      "children": [
+        {
+          "name": "GoalID",
+          "id": "404206eb-cba2-4e27-8e77-c48f4c4f06fe",
+          "type": "document",
+          "isKey": true,
+          "group": "37adc352-5255-4d11-b36e-02dfff5eb9ad",
+          "isVariable": false,
+          "description": null,
+          "children": [
+            {
+              "name": "Name",
+              "id": "07b9140a-b845-4923-a8a4-828d3d6c78d2",
+              "type": "field",
+              "isKey": false,
+              "group": null,
+              "isVariable": false,
+              "description": null,
+         z     "children": [],
+              "fieldType": "string"
+            },
+            {
+              "name": "Description",
+              "id": "fd96c2a3-4793-4cd7-9fda-f69218ef7af6",
+              "type": "field",
+              "isKey": false,
+              "group": null,
+              "isVariable": false,
+              "description": null,
+              "children": [],
+              "fieldType": "string"
+            },
+            {
+              "name": "GoalIndexID",
+              "id": "bdea71d4-f55e-4b98-9eaf-8e90423a14b3",
+              "type": "field",
+              "isKey": false,
+              "group": null,
+              "isVariable": false,
+              "description": null,
+              "children": [],
+              "fieldType": "id"
+            },
+            {
+              "name": "StartDate",
+              "id": "b63870ce-f348-4ca2-9540-12ed30375673",
+              "type": "field",
+              "isKey": false,
+              "group": null,
+              "isVariable": false,
+              "description": null,
+              "children": [],
+              "fieldType": "date"
+            },
+            {
+              "name": "EndDate",
+              "id": "a19c42a2-3fd5-4905-9671-c2bef4115d81",
+              "type": "field",
+              "isKey": false,
+              "group": null,
+              "isVariable": false,
+              "description": null,
+              "children": [],
+              "fieldType": "date"
+            },
+            {
+              "name": "Pillars",
+              "id": "ccf6c53f-6820-4c4b-bc60-13373c4fdccb",
+              "type": "collection",
+              "isKey": false,
+              "group": null,
+              "isVariable": false,
+              "description": null,
+              "children": [
+                {
+                  "name": "PillarID",
+                  "id": "a1dac83d-ad28-46ec-b927-a03b50afc063",
+                  "type": "document",
+                  "isKey": false,
+                  "group": null,
+                  "isVariable": false,
+                  "description": null,
+                  "children": [
+                    {
+                      "name": "PillarIndexID",
+                      "id": "04b2c2fa-6cd1-4239-85f0-e59411f7be1b",
+                      "type": "field",
+                      "isKey": false,
+                      "group": null,
+                      "isVariable": false,
+                      "description": null,
+                      "children": [],
+                      "fieldType": "string"
+                    },
+                    {
+                      "name": "Name",
+                      "id": "a4f421ef-4f91-4b18-a59c-66f0b612ba7e",
+                      "type": "field",
+                      "isKey": false,
+                      "group": null,
+                      "isVariable": false,
+                      "description": null,
+                      "children": [],
+                      "fieldType": "string"
+                    },
+                    {
+                      "name": "Description",
+                      "id": "47837731-210a-4c60-9d90-ba2ffe1aec78",
+                      "type": "field",
+                      "isKey": false,
+                      "group": null,
+                      "isVariable": false,
+                      "description": null,
+                      "children": [],
+                      "fieldType": "string"
+                    },
+                    {
+                      "name": "Actions",
+                      "id": "3b98674f-ea91-4b01-8e42-73105accd761",
+                      "type": "collection",
+                      "isKey": false,
+                      "group": null,
+                      "isVariable": false,
+                      "description": null,
+                      "children": [
+                        {
+                          "name": "ActionID",
+                          "id": "9b29e5fc-fe1d-4df0-b4f3-1f36ad044b7a",
+                          "type": "document",
+                          "isKey": false,
+                          "group": null,
+                          "isVariable": false,
+                          "description": null,
+                          "children": [
+                            {
+                              "name": "ActionIndexID",
+                              "id": "18b213c1-a4f1-4d69-8469-db53806260d5",
+                              "type": "field",
+                              "isKey": false,
+                              "group": null,
+                              "isVariable": false,
+                              "description": null,
+                              "children": [],
+                              "fieldType": "string"
+                            },
+                            {
+                              "name": "Comment",
+                              "id": "afe103ff-407e-442f-a815-a605b2069e6f",
+                              "type": "field",
+                              "isKey": false,
+                              "group": null,
+                              "isVariable": false,
+                              "description": null,
+                              "children": [],
+                              "fieldType": "string"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Users",
+              "id": "d8377bc1-8695-4596-9d87-4e0195476fe5",
+              "type": "collection",
+              "isKey": false,
+              "group": null,
+              "isVariable": false,
+              "description": null,
+              "children": [
+                {
+                  "name": "Users",
+                  "id": "b0dc6940-0e11-465f-882a-b76c7a2d8993",
+                  "type": "document",
+                  "isKey": false,
+                  "group": null,
+                  "isVariable": false,
+                  "description": null,
+                  "children": [
+                    {
+                      "name": "UserIDs",
+                      "id": "6d0cde2f-b565-4730-867c-44d70cbc6612",
+                      "type": "field",
+                      "isKey": false,
+                      "group": null,
+                      "isVariable": false,
+                      "description": null,
+                      "children": [],
+                      "fieldType": "array"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "USERS",
+      "id": "7b856d5a-b614-4451-9d2c-a6910cdd6343",
+      "type": "collection",
+      "isKey": false,
+      "group": null,
+      "isVariable": false,
+      "description": null,
+      "children": [
+        {
+          "name": "Name",
+          "id": "3324ee64-8d04-4ad5-91a0-0baad456b444",
+          "type": "document",
+          "isKey": false,
+          "group": null,
+          "isVariable": false,
+          "description": null,
+          "children": []
+        },
+        {
+          "name": "Email",
+          "id": "a39144e9-b572-48a8-bb13-a2a71702488a",
+          "type": "document",
+          "isKey": false,
+          "group": null,
+          "isVariable": false,
+          "description": null,
+          "children": []
+        },
+        {
+          "name": "AuthID",
+          "id": "12ccee44-5d4b-453d-81d4-0173cc344d01",
+          "type": "document",
+          "isKey": true,
+          "group": null,
+          "isVariable": false,
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "|",
+      "id": "27d19a0f-74a6-4c65-a717-2ef29e178e36",
+      "type": "collection",
+      "isKey": false,
+      "group": null,
+      "isVariable": false,
+      "description": null,
+      "children": [
+        {
+          "name": "Name",
+          "id": "665483cb-1b95-44bb-a497-714cfb88e952",
+          "type": "document",
+          "isKey": false,
+          "group": null,
+          "isVariable": false,
+          "description": null,
+          "children": []
+        },
+        {
+          "name": "Description",
+          "id": "8dc6066b-396a-4969-814c-9f28f25a719c",
+          "type": "document",
+          "isKey": false,
+          "group": null,
+          "isVariable": false,
+          "description": null,
+          "children": []
+        },
+        {
+          "name": "ID",
+          "id": "32ebe740-af9e-44ce-8e0e-f7c41328485b",
+          "type": "document",
+          "isKey": false,
+          "group": null,
+          "isVariable": false,
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "PLANS Index",
+      "id": "92d62f6d-f45c-4c69-9cfe-b7ec2384ba24",
+      "type": "collection",
+      "isKey": false,
+      "group": null,
+      "isVariable": false,
+      "description": null,
+      "children": [
+        {
+          "name": "Name",
+          "id": "9a4ba54d-b17e-4e58-8bbf-59a509f3d255",
+          "type": "document",
+          "isKey": false,
+          "group": null,
+          "isVariable": false,
+          "description": null,
+          "children": []
+        },
+        {
+          "name": "ID",
+          "id": "31ec62eb-339a-4b0c-913b-42f6ebb09a03",
+          "type": "document",
+          "isKey": false,
+          "group": null,
+          "isVariable": false,
+          "description": null,
+          "children": []
+        },
+        {
+          "name": "Description",
+          "id": "4ee9f608-a42b-43a4-8c5c-71d62576bf9b",
+          "type": "document",
+          "isKey": false,
+          "group": null,
+          "isVariable": false,
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "TRACKING Index",
+      "id": "c424f0f8-6d34-4708-9104-34a4f97ba5ad",
+      "type": "collection",
+      "isKey": false,
+      "group": null,
+      "isVariable": false,
+      "description": null,
+      "children": [
+        {
+          "name": "ID",
+          "id": "7032ea97-ee0b-4000-bd00-bc40da411cb9",
+          "type": "document",
+          "isKey": false,
+          "group": null,
+          "isVariable": false,
+          "description": null,
+          "children": []
+        },
+        {
+          "name": "Name",
+          "id": "9c0c4439-7997-4bf4-bb3c-324f023c72a9",
+          "type": "document",
+          "isKey": false,
+          "group": null,
+          "isVariable": false,
+          "description": null,
+          "children": []
+        },
+        {
+          "name": "Description",
+          "id": "559d5589-b1c4-46b9-8442-ceb3485ba74d",
+          "type": "document",
+          "isKey": false,
+          "group": null,
+          "isVariable": false,
+          "description": null,
+          "children": []
+        },
+        {
+          "name": "Type",
+          "id": "f4ea4f3d-f340-4cee-8f3b-c935da5a6ce8",
+          "type": "document",
+          "isKey": false,
+          "group": null,
+          "isVariable": false,
+          "description": null,
+          "children": []
+        },
+        {
+          "name": "Unit",
+          "id": "5b33041b-bcdf-4d3f-956a-65ccef44ce5b",
+          "type": "document",
+          "isKey": false,
+          "group": null,
+          "isVariable": false,
+          "description": null,
+          "children": []
+        },
+        {
+          "name": "AppliesTo",
+          "id": "272c11a6-fdf5-4a99-b1ed-388381d4ecee",
+          "type": "document",
+          "isKey": false,
+          "group": null,
+          "isVariable": false,
+          "description": null,
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "HABITS Index",
+      "id": "8b3cc5cd-2652-435e-b046-7413927e6439",
+      "type": "collection",
+      "isKey": false,
+      "group": null,
+      "isVariable": false,
+      "description": null,
+      "children": [
+        {
+          "name": "ID",
+          "id": "26f13079-fbfe-46f9-b31c-1f0bf435b6cc",
+          "type": "document",
+          "isKey": false,
+          "group": null,
+          "isVariable": false,
+          "description": null,
+          "children": []
+        },
+        {
+          "name": "Name",
+          "id": "0d5076ef-254d-4c83-a335-694fa9911826",
+          "type": "document",
+          "isKey": false,
+          "group": null,
+          "isVariable": false,
+          "description": null,
+          "children": []
+        },
+        {
+          "name": "Description",
+          "id": "6c199f62-dd21-4272-848e-6e4e98f3dc79",
+          "type": "document",
+          "isKey": false,
+          "group": null,
+          "isVariable": false,
+          "description": null,
+          "children": []
+        }
+      ]
+    }
+  ]
