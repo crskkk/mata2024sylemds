@@ -1,0 +1,68 @@
+:root {
+    color-scheme: dark light;
+}
+  
+/* Hide the checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Style the label as a hamburger icon */
+.menu-icon {
+  font-size: 30px; /* Example size */
+  cursor: pointer;
+  /* Add more styles for positioning, appearance, etc. */
+}
+
+/* Style the aside (menu) to be hidden initially */
+aside {
+  /* Adjust these styles to hide the menu as per your design */
+  position: absolute;
+  transform: translateX(-110%);
+  transition: transform 0.3s ease;
+  margin: 5px; /* Adjusts the margin around the <aside> */
+  padding: 20px; /* Adjusts the padding inside the <aside> */
+  border-radius: 10px; /* Rounds the corners */
+}
+
+
+
+/* When checkbox is checked, show the menu */
+#menu-toggle:checked + .menu-icon + aside {
+  transform: translateX(0);
+}
+
+/* Style for the rest of the elements inside aside */
+aside nav ul {
+  list-style-type: none;
+  padding: 0;
+  /* Add more styles as needed */
+}
+
+aside nav ul li a {
+  text-decoration: none;
+  /* Add more styles as needed */
+}
+
+aside {
+  /* Existing styles */
+  background-color: black; /* Example color, change as needed */
+  /* Other styles for positioning and size */
+}
+
+main {
+  transition: margin-left 0.3s ease;
+  /* Other styles as needed */
+}
+
+#authForm input[type=email],
+#authForm input[type=password] {
+    display: block; /* Makes inputs stack vertically */
+    width: 100%; /* Ensures inputs take up the full width of their container */
+    margin-bottom: 10px; /* Adds some space below each input */
+}
+
+#authForm button {
+    display: inline-block; /* Aligns buttons horizontally */
+    margin-right: 10px; /* Adds some space between the buttons */
+}
