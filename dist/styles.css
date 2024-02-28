@@ -1,12 +1,24 @@
 :root {
     color-scheme: dark light;
 }
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  min-height: 100vh; /* Full height of the viewport */
+}
+
   
+/* MENU */
 /* Hide the checkbox */
 #menu-toggle {
   display: none;
 }
-
 /* Style the label as a hamburger icon */
 .menu-icon {
   font-size: 30px; /* Example size */
@@ -18,20 +30,16 @@
 aside {
   /* Adjust these styles to hide the menu as per your design */
   position: absolute;
-  transform: translateX(-110%);
+  transform: translateX(-200%);
   transition: transform 0.3s ease;
   margin: 5px; /* Adjusts the margin around the <aside> */
   padding: 20px; /* Adjusts the padding inside the <aside> */
   border-radius: 10px; /* Rounds the corners */
 }
-
-
-
 /* When checkbox is checked, show the menu */
 #menu-toggle:checked + .menu-icon + aside {
   transform: translateX(0);
 }
-
 /* Style for the rest of the elements inside aside */
 aside nav ul {
   list-style-type: none;
@@ -55,14 +63,65 @@ main {
   /* Other styles as needed */
 }
 
+/* AUTH */
+/**/
 #authForm input[type=email],
 #authForm input[type=password] {
-    display: block; /* Makes inputs stack vertically */
-    width: 100%; /* Ensures inputs take up the full width of their container */
-    margin-bottom: 10px; /* Adds some space below each input */
+  display: block; /* Makes inputs stack vertically */
+  width: 100%; /* Ensures inputs take up the full width of their container */
+  margin-bottom: 10px; /* Adds some space below each input */
 }
 
 #authForm button {
-    display: inline-block; /* Aligns buttons horizontally */
+  display: inline-block; /* Aligns buttons horizontally */
     margin-right: 10px; /* Adds some space between the buttons */
+}
+
+/* GOAL BUILDER */
+textarea, input {
+  width: 100%; /* Full width to accommodate padding */
+  max-width: 600px; /* Standard max-width for desktop */
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 125%; /* 25% larger than normal */
+  border: 3px solid; /* A nice blue border */
+  box-sizing: border-box; /* Include padding and border */
+  resize: vertical; /* Allow only vertical resizing */
+  border-radius: 22px; /* Increased roundness */
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around; /* Distribute buttons evenly */
+  width: 100%;
+  max-width: 600px; /* Same as textarea to align */
+}
+
+button {
+  padding: 10px 20px;
+  max-width: 140px; /* Max width for roundness */
+  color: white;
+  border: none;
+  border-radius: 22px; /* Increased roundness */
+  cursor: pointer;
+  box-shadow: 0 4px; /* 3D effect */
+  font-size: 110%;
+  flex-grow: 1; /* Allow buttons to grow */
+  margin: 0 10px; /* Ensure spacing on small screens */
+  border: 3px solid; /* A nice blue border */
+}
+
+button:active {
+  box-shadow: none;
+  position: relative;
+  top: 4px; /* Button press-down effect */
+}
+
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: row; /* Ensure buttons are in the same line on small screens */
+  }
+  button {
+    margin: 0 5px; /* Adjust margin for small screens */
+  }
 }
