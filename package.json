@@ -18,6 +18,7 @@
     "webpack": "^5.89.0"
   },
   "devDependencies": {
+    "@wixc3/react-board": "^2.2.1",
     "webpack-cli": "^5.1.4"
   }
 }

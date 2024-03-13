@@ -73,7 +73,8 @@ signOutButton.addEventListener('click', () => {
 import {
   getFirestore,
   collection,
-  getDocs
+  getDocs,
+  onSnapshot
 } from 'firebase/firestore'
 const db = getFirestore()
 // What to store:
