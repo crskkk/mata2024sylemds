@@ -1,6 +1,6 @@
-import { firebaseinit } from './firebasecreds.js';
-import { initializeApp } from 'firebase/app';
-firebaseinit();
+import { firebaseinit } from './firebasecreds.js'
+import { initializeApp } from 'firebase/app'
+firebaseinit()
 
 // ::::::AUTHENTICATION:::::: (The auth)
 import{     
