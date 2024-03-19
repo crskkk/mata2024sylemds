@@ -89,5 +89,9 @@ const db = getFirestore()
 const colRef = collection(db, 'METAS')
 getDocs(colRef)
   .then((snapshot) => {
-    console.log(snapshot.docs)
+    let metas = snapshot.docs[0].data().DESCRIPTION
+    document.getElementById('goalBuilder').value = metas
+  })
+  .catch(err => {
+    console.log(err.message)
   })

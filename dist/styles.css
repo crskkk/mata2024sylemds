@@ -30,7 +30,7 @@ body {
 aside {
   /* Adjust these styles to hide the menu as per your design */
   position: absolute;
-  transform: translateX(-200%);
+  transform: translateX(-2000%);
   transition: transform 0.3s ease;
   margin: 5px; /* Adjusts the margin around the <aside> */
   padding: 20px; /* Adjusts the padding inside the <aside> */
@@ -90,7 +90,7 @@ textarea, input {
   border-radius: 22px; /* Increased roundness */
 }
 
-.button-container {
+.actionMenu {
   display: flex;
   justify-content: space-around; /* Distribute buttons evenly */
   width: 100%;
