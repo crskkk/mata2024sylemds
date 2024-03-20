@@ -1,6 +1,5 @@
 npm update && npm audit fix --force && npm update
-git add .
-git status
+git add . && git status
 git commit -m ‘’
 git push origin main
 

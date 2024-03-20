@@ -4,12 +4,10 @@
 
 body {
   margin: 0;
-  padding: 20px;
+  padding: 40px;
   font-family: Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically */
   min-height: 100vh; /* Full height of the viewport */
 }
 

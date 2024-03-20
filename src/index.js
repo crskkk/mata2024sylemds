@@ -3,25 +3,40 @@ import { initializeApp } from 'firebase/app'
 firebaseinit()
 
 // ::::::AUTHENTICATION:::::: (The auth)
+// The plan: Auth checker, Anonymous login, the Signs
 import{     
   getAuth,
+  onAuthStateChanged,
+  signInAnonymously,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signOut,
-  onAuthStateChanged
+  signOut
 }
 from 'firebase/auth'
 const auth = getAuth()
+// User status checker, ie auth flow controller
+onAuthStateChanged(auth, (user) => {
+  user ? (
+    document.querySelector('#uid').textContent = user.email,
+    document.querySelector('#signedOut').style.display = 'none',
+    document.querySelector('#signedIn').style.display = 'block'
+  ) : (
+    signInAnonymously(auth)
+    .then(() => {
+      console.log(user)
+    })
+    .catch((error) => {
+      const errorCode = error.code
+      const errorMessage = error.message
+    })
+  )
+  })
 // HTML Field Listeners
 const email = document.querySelector('#email')
 const password = document.querySelector('#password')
 const signUpButton = document.querySelector('#signUpButton')
 const signInButton = document.querySelector('#signInButton')
 const signOutButton = document.querySelector('#signOutButton')
-// User status checker. NEXT› Be the ONLY Hide and Show controller
-const unsubAuth = onAuthStateChanged(auth, (user) => {
-    console.log(user.email)
-  })
 // Sign Up
 signUpButton.addEventListener('click', ()=>{
     const aemail = email.value
@@ -44,20 +59,20 @@ signUpButton.addEventListener('click', ()=>{
       console.log(err.code + err.message)
     })
   })  
-  // Sign In
-  signInButton.addEventListener('click', ()=>{
-    const aemail = email.value
-    const apassword = password.value
-    signInWithEmailAndPassword(auth, aemail, apassword)
-    .then(cred =>{
-      console.log('USER LOGGED IN')
-      document.getElementById('email').remove()
-      document.getElementById('password').remove()
-      document.getElementById('signUpButton').remove()
-      document.getElementById('signInButton').remove()      
-      document.getElementById('loggedIn').style.display = 'block'
-    })
+// Sign In
+signInButton.addEventListener('click', ()=>{
+  const aemail = email.value
+  const apassword = password.value
+  signInWithEmailAndPassword(auth, aemail, apassword)
+  .then(cred =>{
+    console.log('USER LOGGED IN')
+    document.getElementById('email').remove()
+    document.getElementById('password').remove()
+    document.getElementById('signUpButton').remove()
+    document.getElementById('signInButton').remove()      
+    document.getElementById('loggedIn').style.display = 'block'
   })
+})
 // Sign Out
 signOutButton.addEventListener('click', () => {
   signOut(auth)
@@ -77,21 +92,17 @@ import {
   onSnapshot
 } from 'firebase/firestore'
 const db = getFirestore()
-// What to store:
-//   Goal     SMART
-//   Pillars  3-4
-//   Actions  Tied to a pillar
-//   Plan     Sensible sequence
-//   Schedule Self explanatory
-//   Habits   Enlighten your daily life
-//   Sessions Where habits are practices therefore magic happens
-//   Tracking What's been going on?
+
 const colRef = collection(db, 'METAS')
 getDocs(colRef)
-  .then((snapshot) => {
-    let metas = snapshot.docs[0].data().DESCRIPTION
-    document.getElementById('goalBuilder').value = metas
+.then((snapshot) => {
+  let meta = snapshot.docs[0].data().DESCRIPTION
+  document.getElementById('goalBuilder').value = meta
   })
   .catch(err => {
     console.log(err.message)
   })
+  
+  
+// ::::::AI WORK:::::: (The ai)
+// shruggie
