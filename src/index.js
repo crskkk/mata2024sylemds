@@ -20,10 +20,11 @@ onAuthStateChanged(auth, (user) => {
     document.querySelector('#uid').textContent = user.email,
     document.querySelector('#signedOut').style.display = 'none',
     document.querySelector('#signedIn').style.display = 'block'
+    console.log(user.uid)
   ) : (
     signInAnonymously(auth)
     .then(() => {
-      console.log(user)
+      console.log(user.uid)
     })
     .catch((error) => {
       const errorCode = error.code
@@ -43,7 +44,7 @@ signUpButton.addEventListener('click', ()=>{
     const apassword = password.value
     createUserWithEmailAndPassword(auth,aemail,apassword)
     .then((cred)=>{
-      console.log('USER CREATED')
+      console.log('USER CREATED' + user.uid)
   // RESUME: Hide and Show
       document.getElementById('email').remove()
       document.getElementById('password').remove()
@@ -65,7 +66,7 @@ signInButton.addEventListener('click', ()=>{
   const apassword = password.value
   signInWithEmailAndPassword(auth, aemail, apassword)
   .then(cred =>{
-    console.log('USER LOGGED IN')
+    console.log('USER LOGGED IN' + user.uid)
     document.getElementById('email').remove()
     document.getElementById('password').remove()
     document.getElementById('signUpButton').remove()
@@ -102,7 +103,13 @@ getDocs(colRef)
   .catch(err => {
     console.log(err.message)
   })
-  
-  
+
+// This should resize the area
+const textarea = document.querySelector('#goalBuilder');
+function autoResize() {
+  this.style.height = 'auto';
+  this.style.height = this.scrollHeight + 'px';
+}
+textarea.addEventListener('input',autoResize)  
 // ::::::AI WORK:::::: (The ai)
-// shruggie
+// *shruggies*

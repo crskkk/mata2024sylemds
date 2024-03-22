@@ -1,14 +1,23 @@
 :root {
-    color-scheme: dark light;
+  color-scheme: dark light;
+}
+
+* {
+  background-color: #06114f;
+  color: #f6f7a9;
+  padding: 10px;
+  margin: 5px;
+  border: 5px solid #f6f7a9;
+  border-radius: 20px;
+  font-family: Helvetica, sans-serif;
+  font-size: 110%;
 }
 
 body {
   margin: 0;
-  padding: 40px;
-  font-family: Helvetica, sans-serif;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Full height of the viewport */
 }
 
   
@@ -17,52 +26,34 @@ body {
 #menu-toggle {
   display: none;
 }
-/* Style the label as a hamburger icon */
+/* Style the label as a hamburger icon TO REPLACE WITH LOGO */
 .menu-icon {
-  font-size: 30px; /* Example size */
+  font-size: 30px;
   cursor: pointer;
-  /* Add more styles for positioning, appearance, etc. */
 }
-
 /* Style the aside (menu) to be hidden initially */
 aside {
-  /* Adjust these styles to hide the menu as per your design */
   position: absolute;
-  transform: translateX(-2000%);
-  transition: transform 0.3s ease;
-  margin: 5px; /* Adjusts the margin around the <aside> */
-  padding: 20px; /* Adjusts the padding inside the <aside> */
-  border-radius: 10px; /* Rounds the corners */
+  visibility: hidden;
+  transition: opacity 0.1s, visibility 0.1s;
+  top: 100px;
+  padding: 20px;
 }
 /* When checkbox is checked, show the menu */
 #menu-toggle:checked + .menu-icon + aside {
-  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
 }
 /* Style for the rest of the elements inside aside */
 aside nav ul {
   list-style-type: none;
   padding: 0;
-  /* Add more styles as needed */
 }
-
 aside nav ul li a {
   text-decoration: none;
-  /* Add more styles as needed */
-}
-
-aside {
-  /* Existing styles */
-  background-color: black; /* Example color, change as needed */
-  /* Other styles for positioning and size */
-}
-
-main {
-  transition: margin-left 0.3s ease;
-  /* Other styles as needed */
 }
 
 /* AUTH */
-/**/
 #authForm input[type=email],
 #authForm input[type=password] {
   display: block; /* Makes inputs stack vertically */
@@ -70,22 +61,18 @@ main {
   margin-bottom: 10px; /* Adds some space below each input */
 }
 
-#authForm button {
+button {
   display: inline-block; /* Aligns buttons horizontally */
-    margin-right: 10px; /* Adds some space between the buttons */
+  margin-right: 10px; /* Adds some space between the buttons */
 }
 
 /* GOAL BUILDER */
 textarea, input {
   width: 100%; /* Full width to accommodate padding */
-  max-width: 600px; /* Standard max-width for desktop */
-  margin-bottom: 20px;
-  padding: 15px;
-  font-size: 125%; /* 25% larger than normal */
-  border: 3px solid; /* A nice blue border */
+  max-width: 1000px; /* Standard max-width for desktop */
+  font-size: 150%; /* 25% larger than normal */
   box-sizing: border-box; /* Include padding and border */
   resize: vertical; /* Allow only vertical resizing */
-  border-radius: 22px; /* Increased roundness */
 }
 
 .actionMenu {
@@ -98,12 +85,8 @@ textarea, input {
 button {
   padding: 10px 20px;
   max-width: 140px; /* Max width for roundness */
-  color: white;
-  border: none;
-  border-radius: 22px; /* Increased roundness */
   cursor: pointer;
   box-shadow: 0 4px; /* 3D effect */
-  font-size: 110%;
   flex-grow: 1; /* Allow buttons to grow */
   margin: 0 10px; /* Ensure spacing on small screens */
   border: 3px solid; /* A nice blue border */
