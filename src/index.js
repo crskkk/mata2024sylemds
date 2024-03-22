@@ -19,7 +19,7 @@ onAuthStateChanged(auth, (user) => {
   user ? (
     document.querySelector('#uid').textContent = user.email,
     document.querySelector('#signedOut').style.display = 'none',
-    document.querySelector('#signedIn').style.display = 'block'
+    document.querySelector('#signedIn').style.display = 'block',
     console.log(user.uid)
   ) : (
     signInAnonymously(auth)
