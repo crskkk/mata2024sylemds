@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0">
-    <title>Portal MATA V0.22 (IN PROGRESS) Viernes, 22 de Marzo de 2024</title>
+    <title>Portal MATA V0.23 (IN PROGRESS) Jueves, 9 de Mayo de 2024</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <input type="checkbox" id="menu-toggle" />
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
-    <aside>
-        <nav>
-            <div class="logo">{Logo Space}</div>
+    <input type="checkbox" id="menuToggler" />
+    <label for="menuToggler" class="menu-icon">&#9776;</label>
+    <aside id="aside">
+        <nav id="nav">
+            <div class="logo" id="logo">{Logo Space}</div>
             <form id="authForm">
                 <div id="signedOut">
                     <input type="email" name="email" id="email" placeholder="email" >
@@ -25,7 +25,7 @@
                 </div>
             </form>
                 
-            <ul>
+            <ul id="menu">
                 <li><a href="#profile" style="display: none;">Account</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#store">Store</a></li>
@@ -43,13 +43,15 @@
             <h2>Awareness</h2>
             <div>
                 <textarea id="goalBuilder" placeholder="¿Cuál es tu meta?"></textarea>
-                <div class="actionMenu" style="display: none;">
+                <!-- <div class="actionMenu" style="display: none;"> -->
+                <div class="actionMenu">
                     <button>Undo</button>
                     <button>Ready</button>
                 </div>
             </div>
         </section>    
     </main>
-    <script type="text/javascript" src="main.js"></script>
+    <script id="mainScriptCaller" type="text/javascript" src="main.js"></script>
 </body>
 </html>
+

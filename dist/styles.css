@@ -7,13 +7,15 @@
   color: #f6f7a9;
   padding: 10px;
   margin: 5px;
-  border: 5px solid #f6f7a9;
+  /* border: 5px solid #f6f7a9; */
   border-radius: 20px;
   font-family: Helvetica, sans-serif;
   font-size: 110%;
 }
 
 body {
+  height: 100%;
+  overflow: hidden;
   margin: 0;
   padding: 20px;
   display: flex;
@@ -23,7 +25,7 @@ body {
   
 /* MENU */
 /* Hide the checkbox */
-#menu-toggle {
+#menuToggler {
   display: none;
 }
 /* Style the label as a hamburger icon TO REPLACE WITH LOGO */
@@ -40,7 +42,7 @@ aside {
   padding: 20px;
 }
 /* When checkbox is checked, show the menu */
-#menu-toggle:checked + .menu-icon + aside {
+#menuToggler:checked + .menu-icon + aside {
   opacity: 1;
   visibility: visible;
 }
@@ -72,7 +74,8 @@ textarea, input {
   max-width: 1000px; /* Standard max-width for desktop */
   font-size: 150%; /* 25% larger than normal */
   box-sizing: border-box; /* Include padding and border */
-  resize: vertical; /* Allow only vertical resizing */
+  resize: none; /* Allow only vertical resizing */
+  overflow: hidden;
 }
 
 .actionMenu {

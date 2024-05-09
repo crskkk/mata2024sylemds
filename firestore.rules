@@ -13,7 +13,10 @@ service cloud.firestore {
     // all client requests to your Firestore database will be denied until you Update
     // your rules
     match /{document=**} {
-      allow read, write: if request.time < timestamp.date(2024, 1, 8);
+    	// allow read, write: if request.auth.uid == "IT'S A ME";
+      // allow write: if the ID of whomever did a thing == request.auth.uid; FOR EVERYTHING
+      // allow read: if almost whomever for almost wheverything
+      allow read, write: if true;
     }
   }
 }
